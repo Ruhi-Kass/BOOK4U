@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Book4U</title>
+    <link rel="stylesheet" href="style (1).css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="Book4U Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index (1).html" class="back-btn">← Back to Home</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                <li><a href="mycart.html" class="nav-link">My Cart</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="login.html" class="nav-link">Login</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <div class="search-box">
+                <input type="search" placeholder="Search books..." id="searchInput">
+                <button id="searchBtn">🔍</button>
+            </div>
+            <span id="cartIcon">🛒 <span id="cartCount">0</span></span>
+        </div>
+    </header>
+
+    <main>
+        <section class="shop-section">
+            <div class="shop-header">
+                <h1>📚 Book4U Shop</h1>
+                <p>Browse our collection and find your next favorite read</p>
+            </div>
+
+            <div class="shop-container">
+
+
+                <div class="shop-products">
+                    <!-- Book 1 -->
+                    <div class="shop-card" data-category="fiction">
+                        <span class="shop-card-badge">BESTSELLER</span>
+                        <div class="shop-card-image">
+                            <img src="assets/book1.jpg" alt="The Great Adventure">
+                        </div>
+                        <div class="shop-card-content">
+                            <h4 class="shop-card-title">The Great Adventure</h4>
+                            <p class="shop-card-author">By John Smith</p>
+                            <p class="shop-card-description">An epic tale of courage and discovery. Follow protagonist
+                                Mark as he embarks on a journey across mystical lands.</p>
+                            <p class="shop-card-genre"><strong>Genre:</strong> Adventure, Fantasy |
+                                <strong>Pages:</strong> 324
+                            </p>
+                            <div class="shop-card-price">
+                                <span class="current-price">$9.99</span>
+                                <span class="original-price">$14.99</span>
+                            </div>
+                            <button class="add-to-cart" data-id="1" data-title="The Great Adventure"
+                                data-price="9.99">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Book 2 -->
+                    <div class="shop-card" data-category="educational">
+                        <div class="shop-card-image">
+                            <img src="assets/book2.jpg" alt="Learning Python">
+                        </div>
+                        <div class="shop-card-content">
+                            <h4 class="shop-card-title">Learning Python</h4>
+                            <p class="shop-card-author">By Sarah Johnson</p>
+                            <p class="shop-card-description">Master Python programming from basics to advanced concepts
+                                with practical examples and real-world projects.</p>
+                            <p class="shop-card-genre"><strong>Genre:</strong> Education, Technology |
+                                <strong>Pages:</strong> 456
+                            </p>
+                            <div class="shop-card-price">
+                                <span class="current-price">$14.99</span>
+                                <span class="original-price">$24.99</span>
+                            </div>
+                            <button class="add-to-cart" data-id="2" data-title="Learning Python" data-price="14.99">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Book 3 -->
+                    <div class="shop-card" data-category="fiction">
+                        <span class="shop-card-badge">NEW</span>
+                        <div class="shop-card-image">
+                            <img src="assets/book3.jpg" alt="Mystery Island">
+                        </div>
+                        <div class="shop-card-content">
+                            <h4 class="shop-card-title">Mystery Island</h4>
+                            <p class="shop-card-author">By Mike Davis</p>
+                            <p class="shop-card-description">A gripping mystery thriller set on a secluded island.
+                                Uncover secrets and solve puzzles in this page-turner.</p>
+                            <p class="shop-card-genre"><strong>Genre:</strong> Mystery, Thriller |
+                                <strong>Pages:</strong> 298
+                            </p>
+                            <div class="shop-card-price">
+                                <span class="current-price">$19.99</span>
+                            </div>
+                            <button class="add-to-cart" data-id="3" data-title="Mystery Island" data-price="19.99">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Book 4 -->
+                    <div class="shop-card" data-category="educational">
+                        <div class="shop-card-image">
+                            <img src="assets/book4.jpg" alt="Science Explorer">
+                        </div>
+                        <div class="shop-card-content">
+                            <h4 class="shop-card-title">Science Explorer</h4>
+                            <p class="shop-card-author">By Emily Chen</p>
+                            <p class="shop-card-description">Discover the wonders of science through engaging
+                                experiments and fascinating facts for young learners.</p>
+                            <p class="shop-card-genre"><strong>Genre:</strong> Education, Science |
+                                <strong>Pages:</strong> 212
+                            </p>
+                            <div class="shop-card-price">
+                                <span class="current-price">$24.99</span>
+                                <span class="original-price">$34.99</span>
+                            </div>
+                            <button class="add-to-cart" data-id="4" data-title="Science Explorer" data-price="24.99">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Book 5 -->
+                    <div class="shop-card" data-category="non-fiction">
+                        <span class="shop-card-badge">SALE</span>
+                        <div class="shop-card-image">
+                            <img src="assets/book5.webp" alt="History Uncovered">
+                        </div>
+                        <div class="shop-card-content">
+                            <h4 class="shop-card-title">History Uncovered</h4>
+                            <p class="shop-card-author">By Robert Brown</p>
+                            <p class="shop-card-description">Explore untold stories from history that shaped our world.
+                                A comprehensive journey through time.</p>
+                            <p class="shop-card-genre"><strong>Genre:</strong> History, Non-Fiction |
+                                <strong>Pages:</strong> 387
+                            </p>
+                            <div class="shop-card-price">
+                                <span class="current-price">$12.99</span>
+                                <span class="original-price">$19.99</span>
+                            </div>
+                            <button class="add-to-cart" data-id="5" data-title="History Uncovered"
+                                data-price="12.99">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Book 6 -->
+                    <div class="shop-card" data-category="children">
+                        <div class="shop-card-image">
+                            <img src="assets/book6.png" alt="Kids Adventure">
+                        </div>
+                        <div class="shop-card-content">
+                            <h4 class="shop-card-title">Kids Adventure</h4>
+                            <p class="shop-card-author">By Lisa White</p>
+                            <p class="shop-card-description">A delightful adventure story for children filled with fun
+                                characters, valuable lessons, and colorful illustrations.</p>
+                            <p class="shop-card-genre"><strong>Genre:</strong> Children's, Fiction |
+                                <strong>Pages:</strong> 156
+                            </p>
+                            <div class="shop-card-price">
+                                <span class="current-price">$8.99</span>
+                            </div>
+                            <button class="add-cart-btn" data-id="6" data-title="Kids Adventure" data-price="8.99">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cart & Payment Sidebar -->
+                <div class="shop-sidebar">
+                    <div class="cart-section">
+                        <h3>🛒 Your Cart</h3>
+                        <div class="cart-items" id="cartItems">
+                            <div class="cart-empty">Your cart is empty</div>
+                        </div>
+                        <div class="cart-total">
+                            <span>Total:</span>
+                            <span class="cart-total-amount" id="cartTotal">$0.00</span>
+                        </div>
+                    </div>
+
+                    <div class="payment-section">
+                        <h3>💳 Payment Details</h3>
+                        <p class="payment-intro">Complete your purchase using any of the payment methods below:</p>
+
+                        <div class="payment-methods">
+                            <div class="payment-method-card">
+                                <h4>🏦 Bank Transfer</h4>
+                                <p><strong>Bank:</strong> National Bank</p>
+                                <p><strong>Account Name:</strong> Book4U Ltd</p>
+                                <p><strong>Account Number:</strong> 1234567890</p>
+                                <p><strong>Swift Code:</strong> NATBK123</p>
+                            </div>
+
+                            <div class="payment-method-card">
+                                <h4>📱 Mobile Money</h4>
+                                <p><strong>Provider:</strong> M-Pesa</p>
+                                <p><strong>Business Number:</strong> 0700123456</p>
+                                <p><strong>Paybill:</strong> 888999</p>
+                                <p><strong>Account Name:</strong> Book4U</p>
+                            </div>
+                        </div>
+
+                        <div class="upload-section">
+                            <h4>Upload Payment Receipt</h4>
+                            <p class="upload-instruction">After making payment, upload your receipt or screenshot below:
+                            </p>
+
+                            <div class="upload-area" id="uploadArea">
+                                <div class="upload-icon">📤</div>
+                                <p class="upload-text">Click to upload or drag & drop</p>
+                                <p class="upload-hint">Supports: JPG, PNG, PDF (Max 5MB)</p>
+                                <input type="file" id="paymentFile" accept="image/*,.pdf" hidden>
+                            </div>
+
+                            <div class="upload-preview" id="uploadPreview">
+                                <img class="preview-image" id="previewImage" src="" alt="Payment preview">
+                                <div class="preview-name">
+                                    <span id="fileName"></span>
+                                    <button class="remove-upload" id="removeUpload">✕</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="checkout-btn" id="checkoutBtn" disabled>Complete Order</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Book4U. All rights reserved.</p>
+    </footer>
+
+    <!-- Welcome Modal for New Users -->
+    <div class="welcome-modal-overlay" id="welcomeModal">
+        <div class="welcome-modal">
+            <div class="welcome-modal-icon">🎉</div>
+            <h2 class="welcome-modal-title">Welcome to Book4U!</h2>
+            <p class="welcome-modal-name" id="welcomeUserName"></p>
+            <p class="welcome-modal-text">Your account has been created successfully! Here are a few things you can do:
+            </p>
+            <div class="welcome-modal-tips">
+                <div class="welcome-tip">📚 <strong>Browse</strong> our collection of books below</div>
+                <div class="welcome-tip">🛒 <strong>Add to Cart</strong> any book you like</div>
+                <div class="welcome-tip">💳 <strong>Checkout</strong> using bank transfer or mobile money</div>
+            </div>
+            <button class="welcome-modal-btn" id="welcomeModalClose">Start Shopping →</button>
+        </div>
+    </div>
+
+    <script src="script (1).js"></script>
+</body>
+
+</html>
