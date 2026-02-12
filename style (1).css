@@ -65,7 +65,7 @@ nav ul li {
     font-weight: 600;
 }
 
-/* Update Checkout Button to match modern style */
+/* Checkout Button in modern style */
 .checkout-btn {
     background: #4CAF50;
     color: white;
@@ -283,8 +283,8 @@ header .header-icons input[type="search"] {
 
 .book-img {
     width: 100%;
-    height: 140px;
-    /* Reduced height from 200px */
+    height: 200px;
+    /* Increased to 200px to show images fully */
     object-fit: cover;
     background-color: #eee;
     margin-bottom: 8px;
@@ -829,7 +829,7 @@ footer {
 .category-card img {
     width: 24px;
     height: 24px;
-    object-fit: contain;
+    object-fit: cover;
     margin-bottom: 0;
 }
 
@@ -960,46 +960,48 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     /* Compact grid */
-    gap: 20px;
+    gap: 10px;
+    /* Reduced gap to remove space between sets */
 }
 
 .shop-card {
     background: white;
-    border-radius: 16px;
+    border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
     position: relative;
-    max-width: 250px;
-    /* Prevent over-stretching */
+    max-width: 1000px;
+    max-height: 350px;
+
 }
 
 .shop-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .shop-card-badge {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 8px;
+    right: 8px;
     background: #FF5722;
     color: white;
-    padding: 3px 10px;
+    padding: 2px 8px;
     border-radius: 20px;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     font-weight: 600;
 }
 
 .shop-card-image {
     width: 100%;
-    height: 140px;
-    /* Reduced from 200px */
+    height: 180px;
+    /* Increased to 180px to show images fully */
     background: linear-gradient(135deg, #e8e8e8 0%, #f5f5f5 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #ccc;
 }
 
@@ -1010,73 +1012,74 @@ footer {
 }
 
 .shop-card-content {
-    padding: 15px;
-    /* Compact padding */
+    padding: 5px;
+    /* Reduced padding */
 }
 
 .shop-card-title {
-    font-size: 1rem;
-    /* Smaller title */
+    font-size: 0.9rem;
     color: #333;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
     font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .shop-card-author {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     color: #888;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 
 .shop-card-description {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: #666;
-    line-height: 1.4;
-    margin-bottom: 8px;
+    line-height: 1.2;
+    margin-bottom: 6px;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
-    /* Limit description lines */
+    -webkit-line-clamp: 1;
+    /* STRICTLY 1 line */
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
 
 .shop-card-genre {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     color: #999;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 }
 
 
 .shop-card-price {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 12px;
+    gap: 6px;
+    margin-bottom: 6px;
 }
 
 .current-price {
-    font-size: 1.1rem;
-    /* Smaller price */
+    font-size: 1rem;
     font-weight: 700;
     color: #4CAF50;
 }
 
 .original-price {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #aaa;
     text-decoration: line-through;
 }
 
 .add-cart-btn {
     width: 100%;
-    padding: 8px;
-    /* Compact button */
+    padding: 6px;
+    /* Reduced padding */
     background: linear-gradient(135deg, #4CAF50 0%, #81C784 100%);
     color: white;
     border: none;
-    border-radius: 20px;
-    /* Consistent pill */
-    font-size: 0.9rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -1679,5 +1682,256 @@ nav ul li a.active {
 
     to {
         opacity: 1;
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - MOBILE & TABLET
+   ============================================ */
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) {
+    header {
+        padding: 12px 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    nav li a {
+        font-size: 0.9rem;
+    }
+
+    .shop-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .shop-sidebar {
+        position: static;
+        order: 2;
+    }
+
+    .shop-products {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Mobile (<768px) */
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    .logo img {
+        max-height: 40px;
+    }
+
+    nav {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    nav ul {
+        flex-wrap: nowrap;
+        gap: 10px;
+        padding: 5px 0;
+    }
+
+    nav li a {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+        white-space: nowrap;
+    }
+
+    .header-icons {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .search-box {
+        flex: 1;
+        max-width: none;
+    }
+
+    .search-box input {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 30px 15px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    .categories {
+        padding: 20px 10px;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 10px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 12px;
+        padding: 0 10px;
+    }
+
+    .product-card {
+        max-width: 100%;
+    }
+
+    .book-img {
+        height: 120px;
+    }
+
+    .shop-container {
+        padding: 0 10px;
+        grid-template-columns: 1fr;
+    }
+
+    .shop-products {
+        grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+        gap: 12px;
+    }
+
+    .shop-card {
+        max-width: 100%;
+    }
+
+    .shop-card-image {
+        height: 100px;
+    }
+
+    .shop-card-content {
+        padding: 6px;
+    }
+
+    .shop-card-title {
+        font-size: 0.85rem;
+    }
+
+    .shop-card-author {
+        font-size: 0.7rem;
+    }
+
+    .shop-card-description {
+        font-size: 0.7rem;
+    }
+
+    .shop-card-genre {
+        font-size: 0.6rem;
+    }
+
+    .current-price {
+        font-size: 0.9rem;
+    }
+
+    .add-cart-btn {
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+    .cart-section,
+    .payment-section {
+        padding: 15px;
+    }
+
+    footer {
+        padding: 20px 15px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    button,
+    .add-to-cart,
+    .add-cart-btn {
+        min-height: 44px;
+    }
+
+    #chat-widget {
+        bottom: 80px !important;
+        right: 10px !important;
+        left: 10px;
+        width: calc(100vw - 20px) !important;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    #chat-bubble {
+        right: 15px !important;
+        bottom: 80px !important;
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    button[onclick='toggleChat()'] {
+        bottom: 15px !important;
+        right: 15px !important;
+        width: 55px !important;
+        height: 55px !important;
+        font-size: 24px !important;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra small (<480px) */
+@media (max-width: 479px) {
+
+    .product-grid,
+    .shop-products {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+
+    .shop-card-image,
+    .book-img {
+        height: 90px;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    nav li a {
+        font-size: 0.8rem;
+        padding: 5px 10px;
     }
 }
